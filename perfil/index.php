@@ -131,10 +131,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     }, 3000);
     </script>  
     <?php } ?> 
-    
-
-    
-    
+   
     <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+</body>   
 </html>
