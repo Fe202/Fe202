@@ -36,7 +36,7 @@ $usuario = $sql->fetch(PDO::FETCH_ASSOC);
 
 //Se não encontrar usuário
 
-if(!$usuario){
+if(!$usuario){ 
     return false;
 }else{
     return $usuario;
