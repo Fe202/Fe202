@@ -94,7 +94,7 @@ if($user){
                 <input type="text" <?php echo 'value="'.$user['cep'].'"'?> disabled class="form-control border-dark" name="cep" aria-label="cep">
             </div>
 
-            <div class="col me-5">
+            <div class="col me-5"> 
                 <label for="endereco" class="form-label fw-bold">Endereço</label>
                 <input type="text" <?php echo 'value="'.$user['endereco'].'"'?> disabled class="form-control border-dark" name="endereco" aria-label="endereco">
             </div>
