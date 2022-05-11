@@ -48,7 +48,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha']) &&
 
           if (preg_match("/[0-9]/",$endereco)) {
               $erro_endereco = "Apenas letras e espaços em branco!";
-          }
+          } 
 
           if (!preg_match("/^[a-zA-Z-' ]*$/",$bairro)) {
             $erro_bairro = "Somente permitido letras e espaços em branco!
