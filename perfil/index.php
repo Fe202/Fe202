@@ -29,7 +29,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
         }
         
     }else{
-        $erro_login = "Usuário ou senha incorreto!";
+        $erro_login = "Usuário ou senha incorreto!"; 
     }
 }
 ?>
