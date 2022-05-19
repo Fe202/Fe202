@@ -402,7 +402,7 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha']) &&
             jQuery("#estado").val(dados.uf);
             jQuery("#endereco").val(dados.logradouro);
             jQuery("#bairro").val(dados.bairro);
-            jQuery("#pais").val("Brasil");
+            jQuery("#pais").val("Brasil"); 
 
         });
     });
