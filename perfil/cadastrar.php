@@ -25,10 +25,9 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha']) &&
         $codigo_foto = "";
 
 
-        if (!preg_match("/^[a-zA-Z-' ]*$/",$nome)) {
-            $erro_nome = "Somente permitido letras e espaços em branco!
-            ";
-          }
+        if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/",$nome)) {
+            $erro_nome = "Somente permitido letras e espaços em branco!";
+            }
 
           if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $erro_email = "Formato de email inválido!";
@@ -46,30 +45,29 @@ if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['senha']) &&
               $erro_cep = "8 números sem espaços em branco!";
           }
 
-          if (preg_match("/[0-9]/",$endereco)) {
-              $erro_endereco = "Apenas letras e espaços em branco!";
-          } 
+          if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/",$endereco)) {
+            $erro_endereco = "Somente permitido letras e espaços em branco!";
+            }
 
-          if (!preg_match("/^[a-zA-Z-' ]*$/",$bairro)) {
-            $erro_bairro = "Somente permitido letras e espaços em branco!
-            ";
-          }
+            if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/",$bairro)) {
+                $erro_bairro = "Somente permitido letras e espaços em branco!";
+            }
 
           if (preg_match('/[a-zA-Z\s]/',$numero) || preg_match('/[-+.*!@#$%&*()`^~<>,.;:?\'"]/',$numero)) {
               $erro_numero = "Apenas números!";
           }
 
-          if (preg_match("/[0-9]/",$cidade)) {
-            $erro_cidade = "Apenas letras e espaços em branco!";
-          }
+          if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/",$cidade)) {
+            $erro_cidade = "Somente permitido letras e espaços em branco!";
+            }
 
           if (preg_match("/[0-9]/",$estado) || strlen($estado) != 2 || !preg_match("/[A-Z]/",$estado)) {
             $erro_estado = "Duas letras maiúsculas!";
           }
 
-          if (preg_match("/[0-9]/",$pais)) {
-            $erro_pais = "Apenas letras e espaços em branco!";
-          }
+          if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/",$pais)) {
+            $erro_pais = "Somente permitido letras e espaços em branco!";
+            }
 
             if (!empty($_FILES['foto']['name'])) {   
                 
