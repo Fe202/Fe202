@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fim de Jogo</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="painel">
+
+        <h1 id="h1fim">Fim de jogo</h1>
+
+        <h2 id="h2fim">Sua pontuação foi</h2>
+
+        <p id="pontofinal"></p>
+
+        <button id="botaofim" onclick="jogar()">Jogar novamente</button>
+
+    </div>
+
+    <script>
+        var pontofinal = sessionStorage.getItem('valor');
+
+        document.getElementById("pontofinal").innerHTML = pontofinal;
+
+        function jogar() {
+
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+
+</body>
+
+</html>

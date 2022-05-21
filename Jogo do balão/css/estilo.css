@@ -1,0 +1,201 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.painel {
+    width: 100%;
+    height: 700px;
+    background-color: rgb(160, 2, 252);
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.controle {
+    display: inline-block;
+    width: 80%;
+    height: 650px;
+    background-color: rgb(185, 237, 253);
+    margin: 20px;
+    position: relative;
+
+}
+
+/* BORDA LIMITE */
+/* TOP: 0 - 499
+LEFT:0 - 970
+ */
+#id1{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top:499px;
+    left:970px;  
+    
+}
+#id2{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top:499px;
+    left:700px;
+    
+    
+}
+#id3{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top:499px;
+    left:470px;
+   
+    
+}
+#id4{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top:499px;
+    left:250px;
+    
+   
+}
+#id5{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    top:499px;
+    left:50px;
+    
+
+}
+
+#start{
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    font-size: 30px;
+}
+
+
+#logo_tempo{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    letter-spacing: 5px;
+}
+
+#logo_pontos{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 210px;
+    left: 15px;
+    letter-spacing: 5px;
+}
+
+#tempo{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    text-align: center;
+}
+
+#pontuacao{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 250px;
+    left: 30px;
+    text-align: center;
+
+}
+
+#h1fim{
+    font-size: 130px;
+    color: white;
+}
+
+#h2fim{
+    font-size: 60px;
+    color: white;
+}
+
+#h1inicio{
+    font-size: 130px;
+    color: white;
+}
+
+#botao{
+    font-size: 110px;
+    background-color: red;
+    border: none;
+    border-radius: 2%;
+    color: white;
+}
+
+#botaofim{
+    font-size: 50px;
+    background-color: red;
+    border: none;
+    border-radius: 2%;
+    color: white;
+    top: 610px;
+    left: 520px;
+    position: absolute;
+    
+}
+
+#botao:hover{
+    color: black;
+    cursor: pointer;
+}
+
+#botaofim:hover{
+    color: rgb(2, 136, 177);
+    cursor: pointer;
+}
+
+#pontofinal{
+    font-size: 100px;
+    color: white;
+    top: 350px;
+    left: 650px;
+    position: absolute;
+}
+
+#mensagem{
+    font-size: 100px;
+    color: red;
+    position: absolute;
+    top: 400px;
+    left: 300px;
+}

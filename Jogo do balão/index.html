@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Balão</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+<body>
+
+    <div class="painel">
+
+        <div class="controle">
+
+            <div class="balao" id="id1"></div>
+            <div class="balao" id="id2"></div>
+            <div class="balao" id="id3"></div>
+            <div class="balao" id="id4"></div>
+            <div class="balao" id="id5"></div>
+
+        </div>
+
+        <p id="logo_tempo">Tempo</p>
+        <p id="tempo">0</p>
+        <p id="logo_pontos">Pontos</p>
+        <p id="pontuacao">0</p>
+
+        <p id="mensagem">Clique nos balões</p>
+
+    </div>
+
+
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <script>
+
+
+
+        $('#id1').hide();
+        $('#id2').hide();
+        $('#id3').hide();
+        $('#id4').hide();
+        $('#id5').hide();
+
+
+        tempo = setInterval(function () {
+
+            $('#id1').show().animate({ top: '0px' }, 2000, function () {
+
+                $(this).hide().animate({ top: '499px' }, 10);
+            });
+
+        }, 2030);
+
+        tempo = setInterval(function () {
+
+            $('#id2').show().animate({ top: '0px' }, 2000, function () {
+
+                $(this).hide().animate({ top: '499px' }, 10);
+            });
+
+        }, 3000);
+
+        tempo = setInterval(function () {
+
+            $('#id3').show().animate({ top: '0px' }, 2000, function () {
+
+                $(this).hide().animate({ top: '499px' }, 10);
+            });
+
+        }, 4000);
+
+        tempo = setInterval(function () {
+
+            $('#id4').show().animate({ top: '0px' }, 2000, function () {
+
+                $(this).hide().animate({ top: '499px' }, 10);
+            });
+
+        }, 5000);
+
+        tempo = setInterval(function () {
+
+            $('#id5').show().animate({ top: '0px' }, 2000, function () {
+
+                $(this).hide().animate({ top: '499px' }, 10);
+            });
+
+        }, 6000);
+
+        var game = new Audio('jogo.mp3');
+
+        $('.balao').on({
+
+            click: function () {
+                $(this).hide();
+
+                $('#mensagem').hide();
+
+                let audio = new Audio('balao.wav');
+                audio.play();
+
+                game.play();
+
+
+                let ponto = $('#pontuacao').html();
+                let somaponto = parseInt(ponto) + 1;
+                $('#pontuacao').html(somaponto);
+
+                sessionStorage.setItem('valor', somaponto);
+
+
+            }
+
+        });
+
+
+
+        contador = setInterval(function () {
+
+            let cronometro = $('#tempo').html();
+            let soma = parseInt(cronometro) + 1;
+            $('#tempo').html(soma);
+
+        }, 1000);
+
+        teste = setTimeout(function () {
+
+
+            window.location.href = "fim.html";
+
+        }, 30000);
+
+
+
+    </script>
+</body>
+
+</html>
